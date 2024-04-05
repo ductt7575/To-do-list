@@ -1,0 +1,28 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>To do list</title>
+
+        <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png" />
+        <link rel="manifest" href="./favicon/site.webmanifest" />
+        <meta name="msapplication-TileColor" content="#da532c" />
+        <meta name="theme-color" content="#ffffff" />
+        <link rel="stylesheet" href="./main.css" />
+    </head>
+    <body>
+        <div class="container">
+            <div class="todo-app">
+                <h2>To-Do List <img src="./img/icon.png" alt="" /></h2>
+                <div class="row">
+                    <input type="text" id="input-box" placeholder="Add your task" />
+                    <button onclick="addTask()">Add</button>
+                </div>
+                <ul class="list-container"></ul>
+            </div>
+        </div>
+        <script src="./main.js"></script>
+    </body>
+</html>
