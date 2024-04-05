@@ -2,6 +2,7 @@ const $ = document.querySelector.bind(document);
 
 const listContainer = $('.list-container');
 const inputBox = $('#input-box');
+const inputBtn = $('.row button');
 
 const USER_NAME = 'TRONG_DUC_TODO';
 
@@ -36,6 +37,13 @@ listContainer.addEventListener(
     false,
 );
 
+inputBox.addEventListener('keypress', function (e) {
+    if (e.key === 'Enter') {
+        e.preventDefault();
+        inputBtn.onclick();
+    }
+});
+
 function saveDate() {
     localStorage.setItem(`${USER_NAME}`, listContainer.innerHTML);
 }
@@ -43,4 +51,5 @@ function saveDate() {
 function showTask() {
     listContainer.innerHTML = localStorage.getItem(`${USER_NAME}`);
 }
+
 showTask();
